@@ -1,5 +1,4 @@
 import streamlit as st
-import sklearn
 import joblib
 
 def main():
@@ -26,10 +25,8 @@ def main():
     if st.button('Predict'):
         pred = model.predict([[p1,p2,p3,p4,p5,p6,p7,p8]])
         if pred[0] == 0:
-            #res = 'non-diabetic' 
             st.success('Your Diabetes test result is negative')
         else: 
-            #res = 'diabetic'
             st.success('Your Diabetes test result is positive')
        
     
